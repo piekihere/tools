@@ -1,0 +1,1 @@
+print("teges szmeges")

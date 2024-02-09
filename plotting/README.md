@@ -1,2 +1,5 @@
-#TODO
-Add legend, colours and other fun things
+# TODO:
+- legend customisation
+- custom labels and title
+- custom colouring
+- more plot types eg. histogram

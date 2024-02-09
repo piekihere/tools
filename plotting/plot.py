@@ -23,10 +23,9 @@ parser.add_argument('d', '--dpi', type=int, help="Set png dpi (default <300>).",
 args=parser.parse_args()
 #data prep
 cols = [int(id) for id in args.columns.split(",")]
-data = pd.read_csv(sys.stdin, sep="\t")
+data = pd.read_csv(sys.stdin, sep=args.sep)
 data = data.to_numpy()
 
-#simple x-y plot
 eval(f'plt.{args.plt_type}(data[:,cols[0]], data[:,cols[1]])')
 plt.savefig(args.out_name+".png", dpi = args.dpi)
 plt.close()
